@@ -1,5 +1,21 @@
 /*
-Run in terminal:
+ALWAYS CHECK RESULTS BEFORE MERGE!
+
+# This script updates a package.json file by selecting a stable version of a specified package
+# and checking for compatibility with other dependencies.
+# It uses the npm registry to fetch package metadata and semver for version comparison.
+# It also uses inquirer for user prompts and fs for file operations.
+# The script can be run with different flags to customize its behavior:
+# - --latest: Automatically selects the latest stable version of the main package.
+# - --check-incompatibilities: Checks all dependencies for compatibility with the selected version.
+# - --autoupdate: Automatically updates all incompatible dependencies to the latest compatible version.
+#
+
+Usage:
+# node dependencyUpdater.js <package-name> [--latest] [--check-incompatibilities] [--autoupdate]
+#
+
+Example:
 
 node dependencyUpdater.js react
 # Displays a list of stable React versions (excluding alpha, beta, canary, experimental)
